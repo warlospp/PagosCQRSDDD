@@ -11,9 +11,9 @@ namespace PagosCQRSDDD.Infrastructure.Repositories
 
         public PagoMongoRepository(IConfiguration configuration)
         {
-            var client = new MongoClient(configuration.GetConnectionString("MongoConnection"));
-            var database = client.GetDatabase("bddprodserv");
-            _collection = database.GetCollection<Pago>("Pagos");
+            var client = new MongoClient(configuration["MongoDbSettings:ConnectionString"]);
+            var database = client.GetDatabase(configuration["MongoDbSettings:DatabaseName"]);
+            _collection = database.GetCollection<Pago>(configuration["MongoDbSettings:CollectionName"]);
         }
 
         public async Task<Pago?> ObtenerPagoPorIdAsync(int id)
