@@ -5,7 +5,6 @@ C:\Users\warlo\PagosCQRSDDD\API\obj\Debug\net9.0\API.AssemblyInfo.cs
 C:\Users\warlo\PagosCQRSDDD\API\obj\Debug\net9.0\API.csproj.CoreCompileInputs.cache
 C:\Users\warlo\PagosCQRSDDD\API\obj\Debug\net9.0\API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\warlo\PagosCQRSDDD\API\obj\Debug\net9.0\API.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\warlo\PagosCQRSDDD\API\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\warlo\PagosCQRSDDD\API\bin\Debug\net9.0\appsettings.json
 C:\Users\warlo\PagosCQRSDDD\API\bin\Debug\net9.0\API.staticwebassets.endpoints.json
 C:\Users\warlo\PagosCQRSDDD\API\bin\Debug\net9.0\API.exe
@@ -88,3 +87,10 @@ C:\Users\warlo\PagosCQRSDDD\API\obj\Debug\net9.0\ref\API.dll
 C:\Users\warlo\PagosCQRSDDD\API\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\warlo\PagosCQRSDDD\API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\warlo\PagosCQRSDDD\API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\warlo\PagosCQRSDDD\API\obj\Debug\net9.0\API.sourcelink.json
+C:\Users\warlo\PagosCQRSDDD\API\bin\Debug\net9.0\DnsClient.dll
+C:\Users\warlo\PagosCQRSDDD\API\bin\Debug\net9.0\MongoDB.Bson.dll
+C:\Users\warlo\PagosCQRSDDD\API\bin\Debug\net9.0\MongoDB.Driver.dll
+C:\Users\warlo\PagosCQRSDDD\API\bin\Debug\net9.0\SharpCompress.dll
+C:\Users\warlo\PagosCQRSDDD\API\bin\Debug\net9.0\Snappier.dll
+C:\Users\warlo\PagosCQRSDDD\API\bin\Debug\net9.0\ZstdSharp.dll

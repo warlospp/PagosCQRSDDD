@@ -13,3 +13,4 @@ C:\Users\warlo\PagosCQRSDDD\Application\obj\Debug\net9.0\Application.dll
 C:\Users\warlo\PagosCQRSDDD\Application\obj\Debug\net9.0\refint\Application.dll
 C:\Users\warlo\PagosCQRSDDD\Application\obj\Debug\net9.0\Application.pdb
 C:\Users\warlo\PagosCQRSDDD\Application\obj\Debug\net9.0\ref\Application.dll
+C:\Users\warlo\PagosCQRSDDD\Application\obj\Debug\net9.0\Application.sourcelink.json

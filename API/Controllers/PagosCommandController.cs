@@ -5,17 +5,17 @@ using PagosCQRSDDD.Application.Commands;
 [Route("api/[controller]")]
 public class PagosCommandController : ControllerBase
 {
-    private readonly PagarCommandHandler _handler;
+    private readonly PagarCommandHandler _pagoHandler;
 
     public PagosCommandController(PagarCommandHandler handler)
     {
-        _handler = handler;
+        _pagoHandler = handler;
     }
 
     [HttpPost]
     public async Task<IActionResult> CrearPago([FromBody] PagarCommand command)
     {
-        var id = await _handler.HandleAsync(command);
+        var id = await _pagoHandler.HandleAsync(command);
         return CreatedAtAction(nameof(CrearPago), new { id }, command);
-    }
+    }  
 }

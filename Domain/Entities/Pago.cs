@@ -13,6 +13,8 @@ namespace PagosCQRSDDD.Domain.Entities
 
         public Pago(string clienteId, decimal monto, string metodoPago)
         {
+            ValidarMetodoPago(monto, metodoPago);
+
             ClienteId = clienteId;
             Monto = monto;
             MetodoPago = metodoPago;
@@ -20,8 +22,26 @@ namespace PagosCQRSDDD.Domain.Entities
             Estado = "Procesado";
         }
 
-        public void Reversar()
+        private void ValidarMetodoPago(decimal monto, string metodoPago)
         {
+            metodoPago = metodoPago.ToLower();
+
+            if (monto > 100 && metodoPago != "tarjeta de crédito")
+            {
+                throw new InvalidOperationException("Pagos mayores a 100 solo pueden realizarse con tarjeta de crédito.");
+            }
+
+            if (monto <= 100 && metodoPago  != "efectivo" && metodoPago  != "transferencia")
+            {
+                throw new InvalidOperationException("Pagos menores o iguales a 100 solo pueden ser en efectivo o transferencia.");
+            }
+        }
+
+        public void ReversarPago()
+        {
+            if (Estado == "Reversado")
+                throw new InvalidOperationException("El pago ya está reversado.");
+
             Estado = "Reversado";
         }
     }
