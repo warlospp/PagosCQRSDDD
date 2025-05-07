@@ -1,6 +1,5 @@
 using MongoDB.Driver;
 using PagosCQRSDDD.Domain.Entities;
-using PagosCQRSDDD.Domain.Interfaces;
 using Microsoft.Extensions.Configuration;
 
 namespace PagosCQRSDDD.Infrastructure.Repositories

@@ -1,7 +1,7 @@
 using PagosCQRSDDD.Domain.Entities;
 using System.Threading.Tasks;
 
-namespace PagosCQRSDDD.Domain.Interfaces
+namespace PagosCQRSDDD.Infrastructure.Repositories
 {
     public interface IPagoMongoRepository
     {

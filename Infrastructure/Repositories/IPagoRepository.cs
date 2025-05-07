@@ -1,6 +1,6 @@
 using PagosCQRSDDD.Domain.Entities;
 
-namespace PagosCQRSDDD.Domain.Interfaces
+namespace PagosCQRSDDD.Infrastructure.Repositories
 {
     public interface IPagoRepository
     {

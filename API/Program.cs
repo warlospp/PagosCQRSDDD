@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PagosCQRSDDD.Infrastructure.Persistence;
 using PagosCQRSDDD.Application.Commands;
-using PagosCQRSDDD.Domain.Interfaces;
 using PagosCQRSDDD.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;

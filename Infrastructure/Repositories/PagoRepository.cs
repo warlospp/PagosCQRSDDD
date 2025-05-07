@@ -1,5 +1,4 @@
 using PagosCQRSDDD.Domain.Entities;
-using PagosCQRSDDD.Domain.Interfaces;
 using PagosCQRSDDD.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 

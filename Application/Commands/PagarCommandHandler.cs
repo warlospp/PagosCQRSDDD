@@ -1,5 +1,5 @@
 using PagosCQRSDDD.Domain.Entities;
-using PagosCQRSDDD.Domain.Interfaces;
+using PagosCQRSDDD.Infrastructure.Repositories;
 using PagosCQRSDDD.Infrastructure.Persistence;
 
 namespace PagosCQRSDDD.Application.Commands

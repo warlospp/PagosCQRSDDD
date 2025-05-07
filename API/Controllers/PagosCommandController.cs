@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using PagosCQRSDDD.Application.Commands;
-using PagosCQRSDDD.Domain.Interfaces;
+using PagosCQRSDDD.Infrastructure.Persistence;
+using PagosCQRSDDD.Infrastructure.Repositories;
 
 [ApiController]
 [Route("api/[controller]")]
