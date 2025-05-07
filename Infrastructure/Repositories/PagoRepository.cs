@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace PagosCQRSDDD.Infrastructure.Repositories
 {
-    public class PagoRepositorys : IPagoRepository
+    public class PagoRepository : IPagoRepository
     {
         private readonly PagosDbContext _context;
 
