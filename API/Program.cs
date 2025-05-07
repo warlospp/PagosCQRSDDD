@@ -5,6 +5,7 @@ using PagosCQRSDDD.Domain.Interfaces;
 using PagosCQRSDDD.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using PagosCQRSDDD.Infrastructure.Repositories;
 
 using Microsoft.OpenApi.Models;
 
@@ -23,8 +24,13 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddDbContext<PagosDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.Configure<MongoDbSettings>(
+    builder.Configuration.GetSection("MongoDbSettings"));
+builder.Services.AddSingleton<MongoPagoService>();
+
 builder.Services.AddScoped<IPagoRepository, PagoRepository>();
 builder.Services.AddScoped<PagarCommandHandler>();
+builder.Services.AddScoped<IPagoMongoRepository, PagoMongoRepository>();
 
 var app = builder.Build();
 

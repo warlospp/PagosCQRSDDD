@@ -1,15 +1,18 @@
 using Microsoft.AspNetCore.Mvc;
 using PagosCQRSDDD.Application.Commands;
+using PagosCQRSDDD.Domain.Interfaces;
 
 [ApiController]
 [Route("api/[controller]")]
 public class PagosCommandController : ControllerBase
 {
     private readonly PagarCommandHandler _pagoHandler;
+    private readonly IPagoMongoRepository _mongoRepository;
 
-    public PagosCommandController(PagarCommandHandler handler)
+    public PagosCommandController(PagarCommandHandler handler, IPagoMongoRepository mongoRepository)
     {
         _pagoHandler = handler;
+        _mongoRepository = mongoRepository;
     }
 
     [HttpPost]
@@ -17,5 +20,15 @@ public class PagosCommandController : ControllerBase
     {
         var id = await _pagoHandler.HandleAsync(command);
         return CreatedAtAction(nameof(CrearPago), new { id }, command);
-    }  
+    } 
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> ObtenerPorId(int id)
+    {
+        var pago = await _mongoRepository.ObtenerPorIdAsync(id);
+        if (pago == null)
+            return NotFound();
+
+        return Ok(pago);
+    } 
 }
