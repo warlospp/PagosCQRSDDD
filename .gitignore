@@ -515,3 +515,14 @@ ScaffoldingReadMe.txt
 # Others
 *.log
 *.vs/
+
+API/appsettings.json
+API/bin
+API/obj
+API/Properties
+Application/bin
+Application/obj
+Domain/bin
+Domain/obj
+Infrastructure/bin
+Infrastructure/obj
