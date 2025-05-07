@@ -5,6 +5,6 @@ namespace PagosCQRSDDD.Domain.Interfaces
 {
     public interface IPagoMongoRepository
     {
-        Task<Pago?> ObtenerPorIdAsync(int id);
+        Task<Pago?> ObtenerPagoPorIdAsync(int id);
     }
 }

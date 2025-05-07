@@ -5,8 +5,6 @@ using PagosCQRSDDD.Domain.Interfaces;
 using PagosCQRSDDD.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using PagosCQRSDDD.Infrastructure.Repositories;
-
 using Microsoft.OpenApi.Models;
 
 

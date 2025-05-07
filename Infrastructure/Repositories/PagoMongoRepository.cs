@@ -16,7 +16,7 @@ namespace PagosCQRSDDD.Infrastructure.Repositories
             _collection = database.GetCollection<Pago>("Pagos");
         }
 
-        public async Task<Pago?> ObtenerPorIdAsync(int id)
+        public async Task<Pago?> ObtenerPagoPorIdAsync(int id)
         {
             var filter = Builders<Pago>.Filter.Eq(p => p.Id, id);
             return await _collection.Find(filter).FirstOrDefaultAsync();

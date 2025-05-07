@@ -23,9 +23,9 @@ public class PagosCommandController : ControllerBase
     } 
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> ObtenerPorId(int id)
+    public async Task<IActionResult> ObtenerPagoPorIdId(int id)
     {
-        var pago = await _mongoRepository.ObtenerPorIdAsync(id);
+        var pago = await _mongoRepository.ObtenerPagoPorIdAsync(id);
         if (pago == null)
             return NotFound();
 
