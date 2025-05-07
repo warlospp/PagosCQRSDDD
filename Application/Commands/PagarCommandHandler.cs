@@ -18,11 +18,12 @@ namespace PagosCQRSDDD.Application.Commands
 
         public async Task<int> HandleAsync(PagarCommand command)
         {
-            var pago = new Pago(command.ClienteId, command.Monto, command.MetodoPago);
+            var monto = Monto.Crear(command.Monto);
+            var metodoPago = MetodoPago.Crear(command.MetodoPago);
+            var pago = new Pago(command.ClienteId, monto, metodoPago);
             var id = await _repository.AgregarAsync(pago);
             await _mongoService.InsertarPagoAsync(pago);
             return id;
-
         }
     }
 }

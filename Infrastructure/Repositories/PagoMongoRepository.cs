@@ -6,18 +6,18 @@ namespace PagosCQRSDDD.Infrastructure.Repositories
 {
     public class PagoMongoRepository : IPagoMongoRepository
     {
-        private readonly IMongoCollection<Pago> _collection;
+        private readonly IMongoCollection<PagoMongoDto> _collection;
 
         public PagoMongoRepository(IConfiguration configuration)
         {
             var client = new MongoClient(configuration["MongoDbSettings:ConnectionString"]);
             var database = client.GetDatabase(configuration["MongoDbSettings:DatabaseName"]);
-            _collection = database.GetCollection<Pago>(configuration["MongoDbSettings:CollectionName"]);
+            _collection = database.GetCollection<PagoMongoDto>(configuration["MongoDbSettings:CollectionName"]);
         }
 
-        public async Task<Pago?> ObtenerPagoPorIdAsync(int id)
+        public async Task<PagoMongoDto?> ObtenerPagoPorIdAsync(int id)
         {
-            var filter = Builders<Pago>.Filter.Eq(p => p.Id, id);
+            var filter = Builders<PagoMongoDto>.Filter.Eq(p => p.Id, id);
             return await _collection.Find(filter).FirstOrDefaultAsync();
         }
     }

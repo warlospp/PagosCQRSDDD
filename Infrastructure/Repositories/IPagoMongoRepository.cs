@@ -5,6 +5,6 @@ namespace PagosCQRSDDD.Infrastructure.Repositories
 {
     public interface IPagoMongoRepository
     {
-        Task<Pago?> ObtenerPagoPorIdAsync(int id);
+        Task<PagoMongoDto?> ObtenerPagoPorIdAsync(int id);
     }
 }
