@@ -16,15 +16,12 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 
-builder.Services.AddDbContext<PagosDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-builder.Services.Configure<MongoDbSettings>(
-    builder.Configuration.GetSection("MongoDbSettings"));
-builder.Services.AddSingleton<MongoPagoService>();
-
+builder.Services.AddDbContext<PagosDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<IPagoRepository, PagoRepository>();
 builder.Services.AddScoped<PagarCommandHandler>();
+
+builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDbSettings"));
+builder.Services.AddSingleton<MongoPagoService>();
 builder.Services.AddScoped<IPagoMongoRepository, PagoMongoRepository>();
 
 var app = builder.Build();

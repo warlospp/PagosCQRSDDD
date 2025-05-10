@@ -30,7 +30,6 @@ namespace PagosCQRSDDD.API.Controllers
             var pago = await _mongoRepository.ObtenerPagoPorIdAsync(id);
             if (pago == null)
                 return NotFound();
-
             return Ok(pago);
         } 
     }
